@@ -1,0 +1,40 @@
+.App {
+  padding: 1rem;
+}
+
+.header-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
+}
+
+.header-item {
+  width: 20%;
+  padding: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+
+  &:nth-child(5) {
+    border-right: 1px solid grey;
+  }
+}
+
+.contestants-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li:nth-child(even) {
+    background-color: lightgray;
+  }
+}
+
+.contestants__item {
+  width: 100%;
+  border-bottom: 1px solid grey;
+}

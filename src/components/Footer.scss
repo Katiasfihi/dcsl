@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+
+  &__race-control {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    margin: 0 10px;
+    height: 35px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5%;
+
+    &--start {
+      background-color: green;
+    }
+    &--stop {
+      background-color: red;
+    }
+
+    &--add-name {
+      background-color: dodgerblue;
+    }
+  }
+}
+
+#add-name {
+  margin: 5px;
+  padding: 5px;
+}

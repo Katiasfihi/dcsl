@@ -1,0 +1,22 @@
+.contestants {
+  display: flex;
+  width: 100%;
+
+  &__element {
+    width: 20%;
+    padding-left: 10px;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+    &:nth-child(5) {
+      border-right: 1px solid grey;
+    }
+  }
+
+  &__name {
+    background: orange;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 11%;
+  }
+}
