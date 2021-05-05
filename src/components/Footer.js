@@ -12,10 +12,10 @@ const Footer = ({
 }) => {
   const { elapsedTime, startTimer, stopTimer } = useStopwatch();
 
-  console.log(startRace, stopRace);
   const totalTime = elapsedTime;
   const totalMinutes = Math.floor(totalTime / 60);
   const totalSeconds = totalTime - totalMinutes * 60;
+
   const handleStartRace = () => {
     startRace();
     startTimer();

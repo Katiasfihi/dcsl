@@ -16,7 +16,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setCompetitorsList([...competitorsList, competitorName]);
+    setCompetitorsList([...competitorsList, {name: competitorName, id: Math.random() * 1000 }]);
     setCompetitorName('');
   };
 
@@ -46,10 +46,10 @@ function App() {
         </ul>
       </header>
       <ul className='contestants-list'>
-        {competitorsList.map((competitor) => {
+        {competitorsList.map((el) => {
           return (
             <li className='contestants-item'>
-              <Contestant name={competitor} isRunning={isRunning} />
+              <Contestant name={el.name} id={el.id} isRunning={isRunning} competitorsList={competitorsList} setCompetitorsList={setCompetitorsList} />
             </li>
           );
         })}

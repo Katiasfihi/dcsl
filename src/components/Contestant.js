@@ -2,9 +2,17 @@ import React, { useEffect } from 'react';
 import { useStopwatch } from '../customHooks';
 import './Contestant.scss'
 
-const Contestant = ({ name, isRunning }) => {
+const Contestant = ({ name, isRunning, competitorsList, setCompetitorsList, id}) => {
   const { laps, addLap, elapsedTime, startTimer, stopTimer } = useStopwatch();
 
+  const deleteHandler = () => {
+   
+    setCompetitorsList(competitorsList.filter(el => {
+     return el.id !== id
+    })
+    )
+  }
+  
   useEffect(() => {
     isRunning ? startTimer() : stopTimer();
   }, [isRunning]);
@@ -27,6 +35,9 @@ const Contestant = ({ name, isRunning }) => {
     <div className='contestants'>
       <div className='contestants__element' onClick={() => addLap()}>
         <p className='contestants__name'>{name}</p>
+      </div>
+      <div onClick={deleteHandler}>
+        <button  className='contestants__element--delete'>delete</button>
       </div>
       <div className='contestants__element'>
         <p>{laps.length}</p>
